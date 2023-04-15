@@ -1,0 +1,63 @@
+Introduction To Course
+
+What Course ? 
+How LMS Works ?
+Q & A
+
+7.00 pm to 9.00pm
+
+Deepakkumar (Trainer) 7+ Web Dev & Training 
+
+Full Stack Web Development Internship Program
+    # Full Stack Developer ==> FrontEnd + BackEnd + Database
+    # Web Development ==> When we work with browser and server
+    FrontEnd + BackEnd + Database
+
+    FrontEnd => visible portion of browser
+        #1 HTML :: create a structure of page
+        #2 CSS :: design your web page (core / basic CSS) button (5-10 line)
+            #3 Bootstrap (v5.3) :: CSS Framework (boost app development) button (1 line)
+        #4 JavaScript :: interaction with web page (core js) (on click => 10 line)
+            #5 React JS :: JavaScript Lib (Front End) (on click => 2-3 line)
+
+
+    BackEnd
+        # BackEnd => Server Development (invisible for user)
+        # Node JS 
+            => is a runtime environment for Javascript (support to run a javascript code without browser)
+            => create a server from node JS
+            not server , not language , not lib , not a Framework
+
+        # Express JS :: it's Framework of node js (minimal & flexible ) (MVC)
+            # routing
+            # file uploading
+            # handel session
+            # api server
+
+    Database i.e DB
+        # Collect Data i.e store the data 
+        # SQL DBs = MYSQL , SQL Server , Oracle etc.
+        # noSQL DBs= MongoDB , redis , casandra 
+            
+            MongoDB => fast , flexible , relational & embed data management
+                    => aggregation Framework
+
+    # MongoDB ,Express JS, React JS, Node JS  = MERN Full Stack Web Developer
+
+    # When We Start Next Sat
+    # What is time ==> 7.00 pm to 9.00 pm (sat & sun)
+    # Mentor => 1 hr session a week
+
+    # 8 to 10 Assignment 
+    # 4 mini project
+    # major project (Zomato Clone)
+    # 4.5 months
+    # Practice Question (extra)
+
+    # super intern if extra project
+    # improve resume (2hr)
+    # git over git hub / git pages
+    # linkedIn profile
+
+    # No Group
+
