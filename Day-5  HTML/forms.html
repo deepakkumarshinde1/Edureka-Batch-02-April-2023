@@ -1,0 +1,85 @@
+<html>
+  <head>
+    <title>Intro Page</title>
+  </head>
+  <body>
+    <h1>Registration Forms</h1>
+    <form>
+      <div>
+        <label for="username">Full Name</label>
+        <input
+          required
+          id="username"
+          type="text"
+          placeholder="Enter Full Name"
+        />
+      </div>
+      <div>
+        <label>Email ID</label>
+        <input required type="email" placeholder="Enter Email ID" />
+      </div>
+      <div>
+        <label>DOB</label>
+        <input type="date" />
+      </div>
+      <div>
+        <label>Gender</label>
+        <div>
+          <input type="radio" name="gender" id="male" />
+          <label for="male">Male</label>
+        </div>
+        <div>
+          <input type="radio" name="gender" id="female" />
+          <label for="female">Female</label>
+        </div>
+        <div>
+          <input type="radio" name="gender" id="other" />
+          <label for="other">Other</label>
+        </div>
+      </div>
+      <div>
+        <label for="">Mobile</label>
+        <input type="number" />
+      </div>
+
+      <div>
+        <label for="">Address</label>
+        <textarea rows="10" cols="10" placeholder="enter address"></textarea>
+      </div>
+
+      <div>
+        <label for="">City</label>
+        <select>
+          <option value="">-- Select --</option>
+          <option value="mumbai">Mumbai</option>
+          <option value="pune">Pune</option>
+          <option value="surat">Surat</option>
+          <option value="">Jaipur</option>
+          <option value="">Indore</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="">Search City</label>
+        <input type="text" list="city" placeholder="---select city ---" />
+        <datalist id="city">
+          <option value="">-- Select --</option>
+          <option value="Mumbai"></option>
+          <option value="Pune"></option>
+          <option value="Surat"></option>
+          <option value="Jaipur"></option>
+          <option value="Indore"></option>
+        </datalist>
+      </div>
+      <div>
+        <input type="checkbox" />
+        <label for="">City I Agree for registration</label>
+      </div>
+
+      <div>
+        <input type="file" multiple />
+      </div>
+      <button>Submit</button>
+    </form>
+  </body>
+</html>

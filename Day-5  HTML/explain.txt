@@ -1,0 +1,108 @@
+********************* DAY-1 ***************************
+Step-1 
+    https://code.visualstudio.com/
+
+Step-2
+    create project folder
+    drag & drop in vs code
+
+Step-3
+    create a file as intro.html ==> .html in html
+
+
+# What is html ?
+    # hypertext markup language
+    # in browser html don't create error
+
+# hypertext ?
+    # move from one page to other page
+    # data with symbols & text
+
+# markup ?
+    # html syntax
+
+# programming language ? 
+    syntax and structure & execution flow
+
+# How markups ?
+    <> ==> angle brackets
+    <NameMarkup> ==>Open Tag
+    </NameMarkup> ==> Close tag
+
+    <NameMarkup> data </NameMarkup> ==> HTML Element
+
+# How create basic html page ?
+    # below are basic element
+        <html> ==> parent element i.e your page will start from html
+        <head> ==> store the information about our web page
+            <title> ==> provides a title for page
+        <body> ==> ui (user interface) i.e design we create for web page
+
+# Lets create Hello World Programs
+
+# HTML topic 
+    Typography
+    button
+    images
+    navigation
+    list
+    basic table
+    html forms
+    layout elements
+    video & audio 
+
+# Element Type
+    e.g div ==> print on new line  ===> Block element
+    e.g span ==> print on same line ===> inline element
+
+    inline element => print on same line e.g span , b , i , u , strong, em
+    block element => print on new line e.g h1 , p , section , article, ul , ol
+# Typography
+    heading elements ==> h1 .... h6
+    paragraph ==> p
+    strong , b (bold) , i (italic), em (italic), u (underline) , mark
+
+# button
+    <button disabled>Click</button>
+    disabled ==> extra behaviors 
+    disabled :: attribute => provide a extra behaviors
+    
+
+
+************************** DAY-2 **************************
+
+# images
+    img (src="path" , atl="" , width="100" , height="100")
+
+# navigation
+    a (href="link" , target="_blank")
+
+# list
+    ordered list a,b,c,d ==> ol
+    unordered list ==> ul
+    list item ==> li
+
+# basic table
+    table, thead , tbody , tr , th , td
+    table
+        thead (heading)
+            tr (table row)
+                th (table heading)
+        tbody (data)
+            tr (table row)
+                td (table data)
+
+********************* DAY 3 ****************************
+# html forms
+    full name
+    email id
+    DOB
+    Address
+    Gender
+    Mobile Number
+    City
+    I Agree for registration
+
+# layout elements
+# video & audio 
+# Basic CSS
