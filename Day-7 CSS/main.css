@@ -1,0 +1,23 @@
+.parent {
+  display: flex;
+  flex-direction: row; /*row / column*/
+  flex-wrap: wrap;
+}
+
+.child {
+  width: 50%;
+  height: 100px;
+}
+.red {
+  background-color: red;
+}
+.green {
+  background-color: green;
+}
+.brown {
+  background-color: brown;
+}
+.black {
+  background-color: black;
+  color: white;
+}

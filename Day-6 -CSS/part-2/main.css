@@ -1,0 +1,40 @@
+/* element selector */
+p {
+  background-color: brown;
+  color: yellow;
+}
+
+p {
+  background-color: green;
+  color: black;
+}
+
+/* id selector */
+#span-id {
+  background-color: magenta;
+}
+
+/* class selector (suggested) */
+.bg-purple {
+  background-color: purple;
+}
+
+.bg-red {
+  background-color: red;
+}
+
+.text-white {
+  color: white;
+}
+
+#h1-id {
+  background-color: peru;
+}
+
+.bg-brown {
+  background-color: brown;
+}
+
+h1 {
+  background-color: green;
+}
