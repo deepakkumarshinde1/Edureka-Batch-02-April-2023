@@ -1,0 +1,184 @@
+********************* DAY-1 ***************************
+Step-1 
+    https://code.visualstudio.com/
+
+Step-2
+    create project folder
+    drag & drop in vs code
+
+Step-3
+    create a file as intro.html ==> .html in html
+
+
+# What is html ?
+    # hypertext markup language
+    # in browser html don't create error
+
+# hypertext ?
+    # move from one page to other page
+    # data with symbols & text
+
+# markup ?
+    # html syntax
+
+# programming language ? 
+    syntax and structure & execution flow
+
+# How markups ?
+    <> ==> angle brackets
+    <NameMarkup> ==>Open Tag
+    </NameMarkup> ==> Close tag
+
+    <NameMarkup> data </NameMarkup> ==> HTML Element
+
+# How create basic html page ?
+    # below are basic element
+        <html> ==> parent element i.e your page will start from html
+        <head> ==> store the information about our web page
+            <title> ==> provides a title for page
+        <body> ==> ui (user interface) i.e design we create for web page
+
+# Lets create Hello World Programs
+
+# HTML topic 
+    Typography
+    button
+    images
+    navigation
+    list
+    basic table
+    html forms
+    layout elements
+    video & audio 
+
+# Element Type
+    e.g div ==> print on new line  ===> Block element
+    e.g span ==> print on same line ===> inline element
+
+    inline element => print on same line e.g span , b , i , u , strong, em
+    block element => print on new line e.g h1 , p , section , article, ul , ol
+# Typography
+    heading elements ==> h1 .... h6
+    paragraph ==> p
+    strong , b (bold) , i (italic), em (italic), u (underline) , mark
+
+# button
+    <button disabled>Click</button>
+    disabled ==> extra behaviors 
+    disabled :: attribute => provide a extra behaviors
+    
+
+
+************************** DAY-2 **************************
+
+# images
+    img (src="path" , atl="" , width="100" , height="100")
+
+# navigation
+    a (href="link" , target="_blank")
+
+# list
+    ordered list a,b,c,d ==> ol
+    unordered list ==> ul
+    list item ==> li
+
+# basic table
+    table, thead , tbody , tr , th , td
+    table
+        thead (heading)
+            tr (table row)
+                th (table heading)
+        tbody (data)
+            tr (table row)
+                td (table data)
+
+********************* DAY 3 ****************************
+# html forms
+    full name
+    email id
+    DOB
+    Address
+    Gender
+    Mobile Number
+    City
+    I Agree for registration
+
+# layout elements
+# video & audio 
+# Basic CSS
+
+# CSS => Cascading Style Sheet (CSS3)
+    Design A Page
+       # Create design layout
+       # Add Animation
+       # Web Page Fit Mobile , Laptop , or any device
+       # CSS Only in Browser
+       # CSS Don't Create a error ( but check error a compiler)
+
+*************************** DAY-4 **********************************
+# CSS 
+    ==> Browser CSS ==> By Default Available inside browser ==> low priority
+    ==> Custom CSS ==> developers develop ==> high priority
+        3 Approaches Witter CSS Code
+            background-color (property): red (value) ;(termination property)
+
+            property:value value;
+            property:value value;
+            property:value value;
+
+            # inline CSS (code inside a element)
+                # design a single element
+                # style attribute to wite a code
+                problem: write same code again and gain sample type element
+
+            internal CSS (code inside html)
+                # style element/tag
+                # design a single page
+                problem: for multiple pages handling code difficult
+
+            External CSS (suggested) (code inside css file)
+                # create a file called as CSS
+                # to use external css we need to link that file to html file
+                # web application External CSS (suggested)
+                
+
+How write id in html?
+    id="span-id"
+    id="spanid"
+    id="span_id"
+    id="span123"
+
+    only one element
+    we can't 2 id for one element
+
+How write id in html? 
+    class="bg-magenta"
+    class="bg_magenta"
+    class="bgmagenta"
+
+    one class can use multiple element
+    multiple class single element
+
+What is a priority of selectors / Selector Specificity 
+
+    element < class  < id
+
+
+Inline element don't support height & width
+
+4 ways to design a web page
+    inline-block
+    float
+    grid
+    flex (flex-box)
+
+
+Flex ==> Flexible Box
+
+    parent ==> flex-container (power to change child behaviors)
+        child ==> flex-items
+
+    flex-container
+        display:flex the direction flex-item row
+
+    https://css-tricks.com/snippets/css/a-guide-to-flexbox/

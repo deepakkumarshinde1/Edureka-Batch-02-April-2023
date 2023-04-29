@@ -1,23 +1,37 @@
-.parent {
-  display: flex;
-  flex-direction: row; /*row / column*/
-  flex-wrap: wrap;
+* {
+  margin: 0px; /* remove all unwanted margin*/
+  box-sizing: border-box;
+}
+/* universal selector ==>apply code  all element */
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: lightgreen;
+  /* padding ==> create space inside element*/
+  padding: 10px; /* top-bottom-right-left */
+  padding: 5px 10px; /* top-bottom left-right*/
+  padding: 5px 10px 15px; /* top  left-right bottom*/
+  padding: 5px 10px 15px 20px; /* top  right bottom left */
+
+  /* border ==> surrounding line */
+  /* color width style */
+
+  /* border-style: ;
+  border-color: ;
+  border-width: ; */
+  /* border: red 10px double; */
+  border-left: green 4px solid;
+  border-right: red 4px dotted;
+  border-top: brown 10px dashed;
+  border-bottom: magenta 5px double;
+
+  /*  margin ==> surrounding space to a element */
+  /* margin: 30px; top-bottom-right-left */
+  /* margin: 5px 10px; top-bottom left-right */
+  /* margin: 5px 10px 15px; top  left-right bottom */
+  margin: 5px 10px 15px 20px; /*top  right bottom left */
 }
 
-.child {
-  width: 50%;
-  height: 100px;
-}
-.red {
-  background-color: red;
-}
-.green {
-  background-color: green;
-}
-.brown {
-  background-color: brown;
-}
-.black {
-  background-color: black;
-  color: white;
-}
+/*  border + padding + width == element */
+/* element (238px) */
+/*  200 */

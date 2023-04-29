@@ -1,0 +1,31 @@
+.parent {
+  display: flex;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+  justify-content: flex-end; /* horizontal (default) */
+  /* if move all element left right center */
+  align-items: flex-end; /* vertically (default)*/
+  /* if move all element to top , bottom or center */
+
+  background-color: lightcoral;
+
+  height: 500px;
+}
+
+.child {
+  width: 10%;
+  height: 100px;
+}
+.red {
+  background-color: red;
+}
+.green {
+  background-color: green;
+}
+.brown {
+  background-color: brown;
+}
+.black {
+  background-color: black;
+  color: white;
+}
