@@ -2,3 +2,152 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+.main-section {
+  border: 1px solid black;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: green;
+
+  /* background property */
+  background-image: linear-gradient(transparent, #110a0ae4),
+    url(../images/main-bg.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* 
+  if flex direction is row
+  align-items works vertically (top-to-bottom)
+  justify-content works horizontally (left-to-right)
+
+  if flex direction is column
+  align-items works horizontally (left-to-right)
+  justify-content works vertically (top-to-bottom)
+
+*/
+
+.main-section-header {
+  /* border: 1px solid black; */
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px;
+}
+
+.btn {
+  margin: 0px 5px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+}
+
+.btn-border {
+  border: 1px solid white;
+  border-radius: 4px;
+}
+.brand {
+  margin-top: 20px;
+  background-color: white;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* font properties */
+  border-radius: 50%;
+}
+
+.brand-text {
+  font-size: 70px;
+  font-weight: bold;
+  color: red;
+}
+
+.sub-title {
+  font-size: 30px;
+  margin: 20px 0;
+  color: white;
+}
+
+.search {
+  /* border: 1px solid white; */
+  width: 40%;
+}
+.search-location {
+  width: 35%;
+  padding: 10px;
+}
+
+.search-restaurant {
+  width: 63%;
+  padding: 10px;
+}
+
+/* meal type */
+
+.meal-type-main-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.meal-type-sub-section {
+  width: 80%;
+  /* border: 1px solid black; */
+  margin-top: 40px;
+}
+
+.meal-type-main-title {
+  font-size: 28px;
+  color: #192f60;
+}
+
+.meal-type-sub-title {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #8c96ab;
+}
+
+.meal-type-item {
+  border: 1px solid black;
+  width: 30%;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.meal-type-item-img-div {
+  width: 50%;
+  height: 150px;
+}
+
+.meal-type-item-img {
+  width: 100%;
+  height: 100%;
+}
+
+.meal-type-item-p-div {
+  width: 50%;
+  padding: 8px;
+}
+
+.meal-type-item-title {
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #192f60;
+}
+
+.meal-type-item-sub-title {
+  color: #8c96ab;
+}
+
+.meal-type-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
