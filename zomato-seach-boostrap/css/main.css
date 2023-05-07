@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/* @font-face {
+  font-family: ;
+  src: url();
+} */
+body {
+  font-family: Poppins !important;
+}
+.brand {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
