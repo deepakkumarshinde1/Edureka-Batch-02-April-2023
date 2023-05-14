@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/*  default */
+.parent {
+  display: flex;
+  flex-wrap: wrap;
+}
+.child {
+  border: 1px solid black;
+  height: 150px;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.bg-green {
+  background-color: green;
+}
+.bg-red {
+  background-color: red;
+}
+.bg-magenta {
+  background-color: magenta;
+}
+.bg-brown {
+  background-color: brown;
+}
+/* responsive in css laptop */
+@media screen and (max-width: 900px) and (min-width: 700px) {
+  .parent {
+    justify-content: space-between;
+  }
+  .bg-brown {
+    width: 100%;
+  }
+}
+
+/* responsive in css table */
+/* @media rule of css */
+/* screen digital like mobile, tablet */
+@media screen and (max-width: 700px) and (min-width: 550px) {
+  .child {
+    width: 50%;
+  }
+}
+/*  screen or print */
+
+/* responsive in css mobile */
+@media screen and (max-width: 550px) {
+  .child {
+    width: 100%;
+  }
+}

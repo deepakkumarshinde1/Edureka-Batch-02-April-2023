@@ -15,3 +15,48 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.header-text-color {
+  color: #192f60;
+}
+
+.restaurant-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 20%;
+}
+
+.my-pagination {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+.my-page-items {
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border: 1px solid gray;
+  margin: 5px;
+  color: gray;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.active {
+  background-color: gray;
+  color: white;
+}
+
+.my-shadow {
+  box-shadow: 0px 0px 5px gray;
+  /* x-axis y-axis blur color */
+  /* +X(right) +Y(bottom)  */
+  /* -X(left) -Y(top)  */
+}
+/* input[type="radio"] ==> attribute selector */
+/* input[type="radio"], input[type="checkbox"] ===> group selector*/
+/* input[type="radio"],
+input[type="checkbox"] {
+  accent-color: red !important;
+} */
