@@ -232,3 +232,16 @@ How to add bootstrap in our project
         nav-bar*
         modal (pop) (react)
         accordion (collapse)
+
+        class which can be use for responsive are as bellow
+        -lg- -md-
+        p- ,ps- ,pe- , pt- , pb- , px- py-
+        m- ,ms- ,me- , mt- , mb- , mx- , my-
+
+        col- 
+        d-
+        flex-
+
+    mentor
+        positions
+        simple animation
