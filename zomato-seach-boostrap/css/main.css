@@ -60,3 +60,46 @@ body {
 input[type="checkbox"] {
   accent-color: red !important;
 } */
+
+input[type="text"] {
+  background-color: green;
+  color: white;
+}
+
+input[type="number"] {
+  background-color: red;
+  color: white;
+}
+
+input[type="email"]:hover {
+  background-color: red;
+  color: white;
+}
+
+a[href*=".pdf"]::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  display: inline-flex;
+  background-color: red;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+a::after {
+  content: "\f08e";
+  font-family: FontAwesome;
+}
+
+a[href*=".pdf"]::after {
+  content: "\f1c1";
+  color: red;
+  margin: 0 5px;
+  font-family: FontAwesome;
+}
+
+a[href*=".doc"]::after {
+  content: "\f1c2";
+  font-family: FontAwesome;
+  color: navy;
+}

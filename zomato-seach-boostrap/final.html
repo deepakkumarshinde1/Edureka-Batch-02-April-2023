@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bootstrap</title>
+    <link rel="stylesheet" href="./css/bootstrap/css/bootstrap.css" />
+    <!-- custom css must be below to bootstrap.css -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- right now meta element will help us to work with mobile -->
+    <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+    <!-- add bootstrap javascript  -->
+    <script src="./css/bootstrap/js/bootstrap.js"></script>
+  </head>
+  <body>
+    <section class="container-fluid">
+      <section class="row">
+        <section class="col-12 bg-danger px-0 px-lg-3">
+          <header class="container d-flex justify-content-between py-3">
+            <p class="m-0 brand bg-white fw-bold fs-3 text-danger">e!</p>
+            <div>
+              <button class="btn text-white">Login</button>
+              <button class="btn btn-outline-light">Create an account</button>
+            </div>
+          </header>
+        </section>
+      </section>
+      <section class="row bg-light">
+        <section class="col-11 col-lg-10 m-auto">
+          <h3 class="fw-bold header-text-color mt-2 d-none d-lg-block">
+            Breakfast Places in Mumbai
+          </h3>
+
+          <h5 class="fw-bold header-text-color mt-2 d-lg-none">
+            Breakfast Places in Mumbai
+          </h5>
+          <section class="row gap-lg-4">
+            <!-- collapse filter ui for mobile-->
+            <section
+              class="col-12 col-lg-3 my-shadow p-2 bg-white mb-2 d-flex justify-content-between d-lg-none"
+            >
+              <p class="m-0 fw-bold">Filter/Sort</p>
+              <button
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseFilter"
+              >
+                Show/Hide
+              </button>
+            </section>
+            <!-- filter -->
+            <section
+              class="col-12 col-lg-3 my-shadow p-3 pt-2 bg-white collapse d-lg-block"
+              id="collapseFilter"
+            >
+              <p class="m-0 fw-bold">Filter</p>
+              <div class="my-2">
+                <label for="" class="form-label text-primary fw-bold"
+                  >Select Location</label
+                >
+                <select name="" id="" class="form-select text-muted">
+                  <option value="">location</option>
+                </select>
+              </div>
+              <div class="my-2 mt-3">
+                <label for="" class="form-label text-primary fw-bold"
+                  >Cuisine</label
+                >
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" />
+                  <label for="" class="form-check-label text-muted"
+                    >North Indian</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" checked />
+                  <label for="" class="form-check-label text-muted"
+                    >South Indian</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" checked />
+                  <label for="" class="form-check-label text-muted"
+                    >Chinese</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" />
+                  <label for="" class="form-check-label text-muted"
+                    >Fast Food</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" />
+                  <label for="" class="form-check-label text-muted"
+                    >Street Food</label
+                  >
+                </div>
+              </div>
+
+              <div class="my-2 mt-3">
+                <label for="" class="form-label text-primary fw-bold"
+                  >Cost For Two</label
+                >
+                <div class="form-check">
+                  <input type="radio" class="form-check-input" />
+                  <label for="" class="form-check-label text-muted"
+                    >Less than ` 500</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input type="radio" class="form-check-input" />
+                  <label for="" class="form-check-label text-muted"
+                    >` 500 to ` 1000</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input type="radio" class="form-check-input" />
+                  <label for="" class="form-check-label text-muted"
+                    >` 1000 to ` 1500</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input type="radio" class="form-check-input" />
+                  <label for="" class="form-check-label text-muted"
+                    >` 1500 to ` 2000</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input type="radio" class="form-check-input" />
+                  <label for="" class="form-check-label text-muted"
+                    >` 2000+</label
+                  >
+                </div>
+              </div>
+
+              <div class="my-2 mt-3">
+                <label for="" class="form-label text-primary fw-bold"
+                  >Sort</label
+                >
+                <div class="form-check">
+                  <input type="radio" class="form-check-input" />
+                  <label for="" class="form-check-label text-muted"
+                    >Price low to high</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input type="radio" class="form-check-input" />
+                  <label for="" class="form-check-label text-muted"
+                    >Price high to low</label
+                  >
+                </div>
+              </div>
+            </section>
+
+            <!-- restaurant -->
+            <section class="col-12 col-lg-8 mt-3 mt-lg-0 px-0 px-lg-3">
+              <!--  w-100 = width:100% -->
+              <!-- 1st restaurant -->
+              <section class="my-shadow bg-white p-4 mb-3">
+                <section class="d-flex gap-3 align-items-center">
+                  <img
+                    src="./images/food-item.png"
+                    alt=""
+                    class="restaurant-image"
+                  />
+                  <div>
+                    <p class="mb-2 h4 fw-bold header-text-color">
+                      The Big Chill Cakery
+                    </p>
+                    <p class="mb-1 fw-bold">FORT</p>
+                    <p class="text-muted mb-0">
+                      Shop 1, Plot D, Samruddhi Complex, Chincholi …
+                    </p>
+                  </div>
+                </section>
+                <hr />
+                <!-- horizontal line -->
+                <section class="row">
+                  <section class="col-lg-3 col-6">
+                    <p class="mb-1">CUISINES:</p>
+                    <p class="m-0">COST FOR TWO:</p>
+                  </section>
+                  <section class="col-lg-3 col-6">
+                    <p class="mb-1">Bakery</p>
+                    <p class="m-0">₹700</p>
+                  </section>
+                </section>
+              </section>
+
+              <!-- 2nd restaurant -->
+              <section class="my-shadow bg-white p-4 mb-3">
+                <section class="d-flex gap-3 align-items-center">
+                  <img
+                    src="./images/food-item.png"
+                    alt=""
+                    class="restaurant-image"
+                  />
+                  <div>
+                    <p class="mb-2 h4 fw-bold header-text-color">
+                      The Big Chill Cakery
+                    </p>
+                    <p class="mb-1 fw-bold">FORT</p>
+                    <p class="text-muted mb-0">
+                      Shop 1, Plot D, Samruddhi Complex, Chincholi …
+                    </p>
+                  </div>
+                </section>
+                <hr />
+                <!-- horizontal line -->
+                <section class="row">
+                  <section class="col-lg-3 col-6">
+                    <p class="mb-1">CUISINES:</p>
+                    <p class="m-0">COST FOR TWO:</p>
+                  </section>
+                  <section class="col-lg-3 col-6">
+                    <p class="mb-1">Bakery</p>
+                    <p class="m-0">₹700</p>
+                  </section>
+                </section>
+              </section>
+
+              <!--  pagination -->
+              <!-- <input type="checkbox" class="change-color" /> -->
+              <section class="d-flex justify-content-center">
+                <ul class="my-pagination">
+                  <li class="my-page-items">&lt;</li>
+                  <li class="my-page-items active">1</li>
+                  <li class="my-page-items">2</li>
+                  <li class="my-page-items">3</li>
+                  <li class="my-page-items">4</li>
+                  <li class="my-page-items">&gt;</li>
+                </ul>
+              </section>
+            </section>
+          </section>
+        </section>
+      </section>
+    </section>
+  </body>
+</html>
