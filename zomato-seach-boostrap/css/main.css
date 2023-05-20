@@ -99,7 +99,7 @@ a[href*=".pdf"]::after {
 }
 
 a[href*=".doc"]::after {
-  content: "\f1c2";
-  font-family: FontAwesome;
+  content: "\F7D1";
+  font-family: bootstrap-icons;
   color: navy;
 }

@@ -1,0 +1,27 @@
+Javascript ==> Javascript Programming Language (User Interaction)
+    1994 ( NetScape )
+
+ES ==> ECMA Script (European Computer Manufacturers Association)
+ES1 ,ES2 ,ES3
+ES5(base fundamentals) 2009  ,
+ES6 (all latest advance) 2015 [Angular.io , React , Vue]
+
+
+JavaScript (not strict with type ) we run code browser / TypeScript (strict with type ) (we  can't run code browser)
+
+JAVA Script ( Small Set Code ) 
+
+JavaScript
+    What Create with JS In 2023
+        # Only FrontEnd 
+        # Web Application (Front End & BackEnd )
+        # Server Application (API)
+        # Desktop Application
+        # Mobile Application
+        # ML Application
+
+
+
+How to run javascript Code ?
+    # In HTML without javascript file   ==>  script
+    # Call a  javascript file in HTML  ==> script src="<path_of_js_file>"
