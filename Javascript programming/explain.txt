@@ -25,3 +25,13 @@ JavaScript
 How to run javascript Code ?
     # In HTML without javascript file   ==>  script
     # Call a  javascript file in HTML  ==> script src="<path_of_js_file>"
+
+If we want to change data in html from javascript.
+    # DOM ==> Document Object Model
+    # DOM Tree ==> DOM tree is logical representation of code in tree format
+    # DOM parent element is always a "<html>"
+    # <html> is called as root element
+
+    # if we want to communicate in between javascript & html ==> document
+    # document ==> get html element in js
+    # then you apply logic on that element
