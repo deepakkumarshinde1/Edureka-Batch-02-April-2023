@@ -1,24 +1,26 @@
-// console.log(document);
-// collect html element
-// document.getElementById();
-// document.getElementsByClassName();
-// document.getElementsByTagName();
-// document.querySelector();
-// document.querySelectorAll();
+let button = document.querySelector("#btn");
+let myText = document.querySelector("#myText");
+let textInput = document.querySelector("#text-input");
 
-// run a code in time interval ==> setInterval
-let count = 10;
-let id = setInterval(function () {
-  // interval code
-  if (count === 1) {
-    clearInterval(id);
+// Event is user action
+// add event
+// keyboard => keypress , keyup
+// mouse => click, dblclick , change , mouseover
+
+// add event
+button.addEventListener("click", function () {
+  myText.innerHTML = "Edureka";
+});
+
+button.addEventListener("dblclick", function () {
+  myText.innerHTML = "MERN";
+});
+
+textInput.addEventListener("keyup", function (event) {
+  // collect a data from input ==> .value
+  // 13 ==> enter
+  if (event.keyCode === 13) {
+    let value = textInput.value;
+    myText.innerHTML = value;
   }
-
-  console.log(count);
-  count--;
-}, 1000); // 1s === 1000ms
-
-// after 10 sec you run a code
-setTimeout(function () {
-  console.log("time out");
-}, 1000 * 5);
+});
