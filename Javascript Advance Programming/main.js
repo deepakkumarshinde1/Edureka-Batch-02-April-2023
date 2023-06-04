@@ -1,67 +1,105 @@
-// ES5
-// ES6
-
-// Array destructuring
-let array = [10, 20];
-// let numberOne = array[0];
-// let numberTwo = array[1];
-
-let [numberOne, numberTwo] = array;
-// console.log(numberOne, numberTwo);
-
-// Object destructuring
-let restaurant = {
-  name: "KFC",
-  minCostForTwo: 500,
-  locality: "Katraj",
-  city: "Pune",
-};
-
-// let name = restaurant.name;
-// let locality = restaurant.locality;
-let { name: rName, locality: loc, city } = restaurant;
-
-// console.log(rName);
-// console.log(loc);
-// console.log(city);
-
-//***************** spread operators ...
-// create a new copy of array/object
-// marge two or more array/object
-
-// array
-let arrayOne = [10, 20, 30];
-let arrayThree = [10, 20, 30];
-// let arrayTwo = arrayOne.concat();
-let arrayTwo = [...arrayOne, ...arrayThree];
-
-arrayOne[0] = 22;
-arrayOne.push(1000);
-
-console.log(arrayOne);
-console.log(arrayTwo);
-
-// object
-let rest = {
-  name: "KCF",
-  price: "500",
-};
-
-let cityDetails = {
-  city: "Pune",
-  locality: "Pune Station",
-};
-
-// let restDetails = Object.assign({}, rest, cityDetails);
-let restDetails = { ...rest, ...cityDetails };
-
-console.log(restDetails);
-
-// promises
+// promise with fetch api
 // async await
 // fetch
-// class
+
+// how call a data from server
+// let url = "https://fakestoreapi.com/products";
+// server api GET, POST , PUT ,DELETE
+
+// resolve ==> all is well (.then())
+// reject ==> exception (catch())
+
+// older work with multi promise
+// function getData(url) {
+//   fetch(url, { method: "GET" })
+//     .then(function (response) {
+//       return response.json();
+//     })
+//     .then(function (data) {
+//       console.log(data);
+//     })
+//     .catch(function (error) {
+//       console.log(error);
+//     });
+// }
+
+// new run multiple promise ==> async await
+
+// async ==> convert a function to promise function
+// await ==> run promise and on success it returns a result
+// await can only in async function
+let url = "https://fakestoreapi.com/products";
+async function getData(url) {
+  try {
+    let response = await fetch(url, { method: "GET" });
+    console.log(response);
+    let data = await response.json(); // {} , [{},{}]
+    console.log(data);
+  } catch (error) {
+    console.error(error.message);
+  }
+}
+
+getData(url);
+
+// class ==> oop
+// JAVA , py, php ,c#
 // arrow function
-// ternary operators
+
 // **generator (REDUX-SAGA)
 // **regular expression
+
+// use class  or avoid class
+
+// in-build
+// Date()
+// Object()
+// Array()
+// String()
+// Number()
+// Boolean()
+
+// class ==> property (variables) and method (functions)
+
+// human ==> hands , leg , head , nose , mouth
+// human ==> running , clapping , jumping , speaking, watching
+class Human {
+  // props
+  hands = 2;
+  legs = 2;
+  head = 1;
+
+  // methods
+  running() {
+    console.log("running with 2 legs");
+  }
+}
+// run logic of class we need to create a object
+let deepak = new Human();
+let suraj = new Human();
+deepak.running();
+suraj.running();
+
+class Car {
+  // props
+  wheels = 4;
+  // method
+  running() {
+    console.log("running with 4 wheels");
+  }
+}
+
+let swift = new Car();
+let tiago = new Car();
+swift.running();
+tiago.running();
+
+// car ==> wheels (4)
+// car ==> running
+
+// let date = new Date();
+//  new ==> create a object of a class
+// Date() ==> class contractor assign all methods & props to object
+
+let date1 = new Date(1990, 24, 05); // old date
+let date2 = new Date(); // current date
