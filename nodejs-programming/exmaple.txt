@@ -1,0 +1,80 @@
+What is node js ?
+ # language
+ # framework
+ # lib
+ # tool
+ # runtime environment ********
+
+ Node js is runtime environment for javascript
+ We want to run javascript without a browser ==> node JS 
+
+# we can js code
+# node we can build server 
+# JS & ES6
+
+serve java program over internet ==> Apache / Nginx
+serve py program over internet ==> Apache / Nginx
+serve php program over internet ==> Apache / Nginx
+
+serve js program over internet ==> Node JS
+
+# we can develop 
+    => Mobile App (react native / angular native),
+       Desktop App (Electron js),
+       FrontEnd App (React DOM / Angular DOM) ,
+       Server App (Express js)
+
+modules ==> part code,
+modals ==> bootstrap popup, 
+model ==> can connect with data or DB
+
+# modules 
+    ==> native => in-build in node js :: http, https , path , os , fs , url , events, crypto 
+    ==> custom modules :: created by developers :: restaurant , user , payment
+    ==> 3rd party modules :: some one else :: react(lib) , angular(fw), express(fw) , mongoose(lib) , mongodb
+    
+module can lib,fw, function/variable , array , object , class
+
+# node js basic server
+# read file in node js
+# parse a url in node js
+
+# Express JS ==> zomato clone
+# MongoDB ==> data in data base
+# zomato clone api
+
+Search on google.
+# what is modules
+# package.json file
+# npm command & What is npm
+
+
+/
+/about
+/our-project
+/contact-us
+
+
+CLI i.e command line interface ==> npm
+npm ==> node package manage
+    ==> manage you project
+    ==> add new package (module)
+    ==> update package 
+    ==> remove a package
+    ==> create project configuration file called as package.json
+    ==> package.json will have all the details about our project
+            name 
+            version
+            script ==> run feature of project
+            list of our dependance
+
+// Search 
+what is express js ?
+what is mean by a middleware ?
+what is mean by routing ?
+what is http methods ?
+what use of http methods ?
+what is http status code ?
+what is use of http status code ?
+
+3rd assignment deadline is 20 th june 2023
