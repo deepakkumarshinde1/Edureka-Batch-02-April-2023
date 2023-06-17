@@ -78,3 +78,36 @@ what is http status code ?
 what is use of http status code ?
 
 3rd assignment deadline is 20 th june 2023
+
+
+node js project
+    package.json
+    index.js / app.js / server.js
+
+    create a package.json file command we use is
+    npm init
+    npm init -y
+
+Express Js is framework for node js to create a server
+Express Js runs over the node js
+20% is available as base of project
+Express JS can boost application development
+Express support app features
+Express application simple to maintain
+Express use MVC architecture pattern for application development.
+M : model , V : View , C : Controller
+Express js comes with in-build Routing
+    under http we a routing method
+
+    GET => Read data of server 
+    POST => Create/Add/Insert Record
+    PUT ==> Update Data Over Server
+    DELETE ==> Remove Data From Server
+    
+    CRUD ==> operations
+
+How install express js.
+    npm i <package_name>
+    npm i <package_name>@version
+    npm i express
+
