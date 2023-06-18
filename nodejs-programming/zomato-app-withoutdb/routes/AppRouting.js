@@ -1,9 +1,17 @@
 // extract routing express
 const AppRouting = require("express").Router();
+const RestaurantController = require("../controller/RestaurantController");
 
-AppRouting.get("/", (request, response) => {
-  response.send("Home Router from AppRouting");
-});
+// UI Page
+AppRouting.get("/", RestaurantController.getHomePage);
+
+// REST API (for mobile app, react-app , angular-app)
+// Representational State Transfer
+// API Programming Interface
+AppRouting.get("/get-restaurant-list", RestaurantController.getRestaurantList);
+// .post
+// .put
+// .delete
 
 // AppRouting
 module.exports = AppRouting;

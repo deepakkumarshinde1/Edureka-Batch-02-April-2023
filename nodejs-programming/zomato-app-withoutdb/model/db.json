@@ -1,0 +1,22 @@
+[
+  {
+    "name": "KFC",
+    "location": "mumbai",
+    "costForTwo": 500
+  },
+  {
+    "name": "Green Cafe",
+    "location": "mumbai",
+    "costForTwo": 500
+  },
+  {
+    "name": "Ashoka Hotel",
+    "location": "mumbai",
+    "costForTwo": 500
+  },
+  {
+    "name": "Court Club",
+    "location": "mumbai",
+    "costForTwo": 500
+  }
+]

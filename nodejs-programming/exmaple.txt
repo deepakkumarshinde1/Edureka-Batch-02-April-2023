@@ -111,3 +111,19 @@ How install express js.
     npm i <package_name>@version
     npm i express
 
+Express JS ==> MVC
+M => Model (work data/database)
+V => View  (UI / Front End) (files of template) 
+C => Controller (Management of functionality)
+public
+    ==> js 
+    ==> css
+    ==> images
+    ==> font
+
+TEST API  
+    Postman (manual testing tool)
+        GET
+        POST
+        PUT
+        DELETE

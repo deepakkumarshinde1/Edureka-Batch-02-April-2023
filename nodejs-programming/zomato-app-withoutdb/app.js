@@ -3,6 +3,12 @@ const express = require("express");
 const app = express();
 const AppRouting = require("./routes/AppRouting");
 
+// set a view
+app.set("views", "./views");
+app.set("view engine", "pug");
+
+app.use(express.static("./public")); // set file folder
+
 // how to attached Routing to app
 // use ==> middleware , inject the functionality
 app.use("/", AppRouting);
