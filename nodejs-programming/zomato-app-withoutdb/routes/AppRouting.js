@@ -9,6 +9,10 @@ AppRouting.get("/", RestaurantController.getHomePage);
 // Representational State Transfer
 // API Programming Interface
 AppRouting.get("/get-restaurant-list", RestaurantController.getRestaurantList);
+AppRouting.get(
+  "/get-single-restaurant/:city",
+  RestaurantController.getSingleRestaurant
+);
 // .post
 // .put
 // .delete

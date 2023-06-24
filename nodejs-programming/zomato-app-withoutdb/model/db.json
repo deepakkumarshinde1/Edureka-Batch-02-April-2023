@@ -6,17 +6,17 @@
   },
   {
     "name": "Green Cafe",
-    "location": "mumbai",
+    "location": "pune",
     "costForTwo": 500
   },
   {
     "name": "Ashoka Hotel",
-    "location": "mumbai",
+    "location": "pune",
     "costForTwo": 500
   },
   {
     "name": "Court Club",
-    "location": "mumbai",
+    "location": "nashik",
     "costForTwo": 500
   }
 ]
