@@ -99,6 +99,8 @@ M : model , V : View , C : Controller
 Express js comes with in-build Routing
     under http we a routing method
 
+
+
     GET => Read data of server 
     POST => Create/Add/Insert Record
     PUT ==> Update Data Over Server
@@ -121,9 +123,63 @@ public
     ==> images
     ==> font
 
+
 TEST API  
     Postman (manual testing tool)
         GET
         POST
         PUT
         DELETE
+STATUS Code  
+    200 ==> all is well,
+    304 ==> not modify,
+    client error => 400 401, 403 , 404 ,
+    server error => 500 , 503, 502, 501, 504
+
+Query Params ==> Type are use to read dynamic data form usr like /product/1 , /product/2 ,/product/3
+Test that api on postman
+How build the api
+
+
+Query String*
+
+
+
+SQL ==> Structure Query Language
+    ==> Data is stored in a table format
+    ==> Need space to store data & more RAM
+    ==> not flexible store data
+    ==> Database Server ==> Database ==> Tables ==> Rows ==> Column
+
+    ==> Simple to learn
+    ==> Relational Logic
+    ==> Embed a record in json format (per Column)
+
+
+
+No-SQL Database  
+    => No STructure Query Language
+    => Data is Stored in Document Format
+    ==> Need less space to store data & more RAM
+    ==> flexible to store data
+    ==> Database Server ==> Database ==> Collections ==> Document ==> Fields
+
+    ==> Simple  to learn
+    ==> Relational Logic
+    ==> Embed a record in json format (per Field)
+    
+
+MongoDB ==> 
+    store a huge amount of data in less space
+    don't want to store data with constraint / schema / structure
+
+    Download it https://fastdl.mongodb.org/windows/mongodb-windows-x86_64-6.0.6-signed.msi
+    Install  MongoDB
+    MongoDBShell  https://www.mongodb.com/try/download/shell
+
+    Copy folder to C Drive 
+    Extract it 
+    mongosh
+
+
+    copy C:\mongosh\bin and set it to environment
