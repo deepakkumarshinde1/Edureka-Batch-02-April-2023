@@ -1,0 +1,52 @@
+Query Methods
+db
+    get list db ==> show dbs
+    create / change db ==>use dbName
+    delete db
+
+collection  (set of documents)
+    get list collection ==>  show collections
+    create collection ==> db.createCollection('restaurans')
+    delete collection ==> db.restaurans.drop()
+
+documents (data) BSON (Binary JSON)
+    add data  
+        one ==> insertOne({...})
+            ObjectId("64985366862d2668b5118289") ==> Primary Key (Unique , Not A null)
+        many ==> insertMany([{...},{...}])
+        
+    read data 
+        find() ==> db.restaurants.find()
+        db.restaurants.find({category: 'jewelery'});  {} =>  filter
+    how project data (get specific data)
+        db.restaurants.find({category: 'jewelery'}, {}) ==> {} ==> projection  1 ==> want , 0 don't want 
+
+        db.restaurants.find({category: 'jewelery',price:{$lt:100}},{title:1})
+
+    delete data
+        db.restaurants.deleteOne({category: 'jewelery'}) ==> 1st find record
+        db.restaurants.deleteMany({category: 'jewelery'}) ==> all record jewelery
+        db.restaurants.deleteMany({}) ==> all record
+
+
+
+mongodb operators
+    update record
+    rename felids
+
+Create Record => C
+Read Record ==> R
+Update Record => U
+Delete Record => D
+
+CRUD
+
+01-01-1970
+
+ObjectId ==> 12 Bytes i.e 24 char ==> hex code ==> 64985366 862d2668b5 118289
+    0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 ==> Decimal
+    0 1 2 3 4 5 6 7 8 9 a  b  c  d  e  f  ==> Hex Decimal Number
+
+    A 4-byte timestamp.
+    A 5-byte random value generated once per process.
+    A 3-byte incrementing counter,
