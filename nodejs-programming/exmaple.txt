@@ -183,3 +183,46 @@ MongoDB ==>
 
 
     copy C:\mongosh\bin and set it to environment
+
+
+Zomato Api Server
+
+api ===> react
+
+I want connect mongodb to node js
+    mongodb driver :: needs more code / schema structure
+
+    node js ===> mongodb driver ===> mongodb database
+
+    mongoose lib ( uses mongodb driver only)
+        ==> schema structure
+        ==> code minimization
+
+    node js ==> mongoose ===> mongodb driver ===> mongodb database
+
+    schema is structure of document in mongodb (noSQL DB)
+        users
+            [{
+                "id": Number,
+                "first_name": String,
+                "last_name": String,
+                "email": String,
+                "gender": String
+            }]
+
+    schema is structure of table in mySQl (SQL DB)
+        users
+            id (INT)
+            first_name (VARCHAR(20))
+            last_name": (VARCHAR(20))
+            email": (VARCHAR(20))
+            gender": (VARCHAR(20))
+
+
+# create html & css ui 
+# call input inside the javascript by using document.querySelector()
+# call button inside the javascript by using document.querySelector()
+# on button click call input data
+# hit api with fetch method
+# on response of fetch retrieve data
+# and the display data by using innerHTML

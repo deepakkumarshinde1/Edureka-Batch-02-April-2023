@@ -1,15 +1,15 @@
 Query Methods
-db
+db (book rack)
     get list db ==> show dbs
     create / change db ==>use dbName
-    delete db
+    delete db.dropDatabase();
 
-collection  (set of documents)
+collection (books)  (set of documents)
     get list collection ==>  show collections
     create collection ==> db.createCollection('restaurans')
     delete collection ==> db.restaurans.drop()
 
-documents (data) BSON (Binary JSON)
+documents (pages of books) (data) BSON (Binary JSON)
     add data  
         one ==> insertOne({...})
             ObjectId("64985366862d2668b5118289") ==> Primary Key (Unique , Not A null)
