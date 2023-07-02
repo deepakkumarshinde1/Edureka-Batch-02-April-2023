@@ -226,3 +226,15 @@ I want connect mongodb to node js
 # hit api with fetch method
 # on response of fetch retrieve data
 # and the display data by using innerHTML
+
+
+Which api we will create 
+    Home Page
+        GET /get-location-list
+        GET /get-restaurant-list-by-loc-id
+        GET /get-meal-type-list
+        POST /add-user
+        POST /login
+
+    Search Page
+    Restaurant Page

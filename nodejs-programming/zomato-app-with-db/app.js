@@ -3,7 +3,11 @@ const app = express();
 const mongoose = require("mongoose");
 
 const AppRouter = require("./routes/AppRoutes");
-
+// enable post data
+app.use(express.json()); // '{abc:10,xyz:123}'  ==> {abc:10,xyz:123}// allow row i.e json data
+app.use(express.urlencoded({ extended: false })); // enable form data
+// abc=10&xyz=123 ==> {abc:10,xyz:123}
+// extended: false ==> will not allow parma or query params
 //add routes
 app.use("/api", AppRouter);
 
