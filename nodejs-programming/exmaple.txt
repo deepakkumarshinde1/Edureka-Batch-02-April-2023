@@ -230,11 +230,25 @@ I want connect mongodb to node js
 
 Which api we will create 
     Home Page
-        GET /get-location-list
-        GET /get-restaurant-list-by-loc-id
-        GET /get-meal-type-list
-        POST /add-user
-        POST /login
+        GET /get-location-lis*
+        GET /get-restaurant-list-by-loc-id*
+        GET /get-meal-type-list*
+        POST /add-user*
+        POST /login*
 
-    Search Page
+    Search Page (assignment-6)
+        /filter
+            *mealtype ==> mandatory
+            location ==> optional
+            cuisines ==> optional
+            *cost-for-two ==> optional
+            *sort ==> optional
+            *page ==> default(1) per-page 2 restaurant will be there
+
     Restaurant Page
+        /get-restaurant-details-by-rest-id*
+        /get-menu-list-by-rest-id*
+
+        /get-order-id
+        /verify-payment
+            // save-order-of-user
