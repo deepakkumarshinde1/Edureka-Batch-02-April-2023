@@ -1,0 +1,20 @@
+What is react ?
+What is current version of react ?
+What is difference between React and Angular ?
+What is component in react ?
+What is difference between Class Component and Function Component ?
+What is States in React ?
+What is Props in React ?
+Explain State vs Props ?
+What is Event and How to handel Event in react?
+What is props drilling in react ?
+What is single source of truth ?
+What is Hooks in react ?
+Explain React Lifecycle methods in Class component.
+Explain React Lifecycle hook in functional component.
+How to handel loop in react js ?
+How to handel if.. else in react ?
+What is VDOM (virtual DOM) ?
+What is babel ?
+What is webpack ?
+

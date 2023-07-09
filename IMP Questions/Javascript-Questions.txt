@@ -1,0 +1,41 @@
+What is Javascript ?
+What is Javascript Engine ?
+What Data Types and State the Type?
+What is function ?
+What is difference between ES5 and ES6 ?
+What is difference between let , const & var ?
+What is difference between expression function and arrow function ()=>{} ?
+What is difference between expression map and forEach in array ?
+What is DOM ?
+What is BOM ?
+What is difference between BOM & DOM ?
+Explain Array and Is Methods ?
+What is difference between null and undefined ?
+What is datatype "NAN" ?
+*What is use of isNAN() 
+What is Event Loop ?
+What is ES6 features ?
+What is ternary operator ?
+What is async and await ? or What is promises ?
+What is difference  between try catch block & promise ?
+What is use clear interval explain wit example ?
+*What storages in browser ?
+*How does prototypal inheritance work in JavaScript? Explain with an example.
+What is difference between spread operator & rest operator ?
+Explain fetch API with an example.
+What is Object.entries() ?
+Basic OOP Question ?
+What is a class ?
+What is a constructor ?
+What is mean by static method of class ?
+What is generators in javascript ?
+What is regex ?
+How handel events ?
+What is array destructuring ?
+What is Callback ?
+What is implicit type casting & Explicit Type Casting
+
+
+
+
+

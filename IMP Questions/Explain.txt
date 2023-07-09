@@ -1,0 +1,8 @@
+React ==> React v18
+React is library ==> set of functionality
+React is use build User Interface For FontEnd
+
+React ==>
+    Web Dev ==> React (80%)+ React DOM (20%)
+    Mobile Dev ==> React (20%) + React Native (20%)
+    Desktop App ==> React (80%)+ React DOM (20%)

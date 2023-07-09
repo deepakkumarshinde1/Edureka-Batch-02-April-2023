@@ -1,0 +1,56 @@
+What is Node JS ?
+Explain Node Architecture & Non Blocking I/O ?
+What do you mean by non-blocking and event driven programming ?
+What is node js by default ? sync or async.
+What is module ? 
+Explain HTTP/FS/Events/Path/OS module ?
+Explain how to create basic server in Node JS ?
+Explain __dirname and __filename in node js
+What is NPM ?
+What package.json ?
+What package-lock.json ?
+State commands of NPM ?
+What is difference between NPM and NPX ?
+What is environment variable in Node JS ?
+What is difference between Node JS and Express JS ?
+How to import a module in common js ?
+How to export a module in common js ?
+What is express js ?
+What is express "use" method ?
+What is express "set" method ?
+What is routing in express ?
+What is MVC pattern in express ?
+How to handel error in express ?
+How manage logs in express ?
+How set static file sharing ?
+What is rendering engine explain how to set it ? 
+
+# how to handel file uploading in express multer/express-fileupload ?
+# how to work with a session in express js ?
+# what is middleware how to set custom middleware ?
+
+What is database driver ?
+What is MongoDB ?
+What is difference between mongosh and mongod command.
+What is collection in mongodb ?
+What is BSON in mongodb ?
+# How to set indexing mongoDB ?
+# How many type of indexing are there in mongodb ?
+What is document in mongodb ?
+Explain with example basic CRUD operation in mongodb ?
+# what is aggregation  aggregation framework in MongoDB ?
+# what is lookup explain with example ?
+What is operators in mongodb ?
+What is mongoose ?
+How to connect mongodb with node/express app with mongoose library ?
+What is schema in mongoose ?
+What is model in mongoose ?
+# Explain validation in mongoose ?
+
+What is REST API ?
+What is POSTMAN ?
+Explain HTTP methods in node/express js.
+Explain Use of status code.
+
+How to enable CORS in express.js
+How to enable post data in express.js
