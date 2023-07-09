@@ -1,0 +1,36 @@
+What is react ?
+What is current version of react ?
+What is difference between React and Angular ?
+What is component in react ?
+What is difference between Class Component and Function Component ?
+What is States in React ?
+What is Props in React ?
+Explain State vs Props ?
+What is Event and How to handel Event in react?
+What is props drilling in react ?
+What is single source of truth ?
+What is Hooks in react ?
+Explain React Lifecycle methods in Class component.
+Explain React Lifecycle hook in functional component.
+How to handel loop in react js ?
+How to handel if.. else in react ?
+What is VDOM (virtual DOM) ?
+What is babel ?
+What is webpack ?
+What is Context API ?
+What is context.Provider use for ?
+How to handel api call in react js ?
+What is SPA (Single Page Application) ?
+How to handel routing in React ?
+What is useState() ?
+What is difference between useState & setState ?
+What is useEffect ?
+What is difference between useEffect & useLayoutEffect ?
+What is pure component ?
+How to achieve a pure component in class ?
+How to achieve a pure component in functional Component ?
+What is a difference between memo , useMemo & useCallback ?
+What is Higher Order Component i.e HOC ?
+What is a Wrapper Component ?
+What is difference HOC & Wrapper Component ?
+What is difference between useState & useReducer ?

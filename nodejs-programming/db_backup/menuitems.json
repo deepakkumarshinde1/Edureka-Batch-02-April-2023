@@ -1,0 +1,177 @@
+[{
+  "_id": {
+    "$oid": "62f866fdee6d3d3b4fe285c9"
+  },
+  "name": "Kadhai Paneer",
+  "description": "Made with paneer and some quick spicy content like chilly and flakes.",
+  "ingridients": [
+    "Paneer",
+    "Tomato"
+  ],
+  "restaurantId": {
+    "$oid": "62f71de27824c682ccce79a0"
+  },
+  "image": "assets/breakfast.png",
+  "qty": 0,
+  "price": "200"
+},{
+  "_id": {
+    "$oid": "62f866fdee6d3d3b4fe285ca"
+  },
+  "name": "Butter Paneer",
+  "description": "Made with paneer and some quick spicy content like chilly and flakes.",
+  "ingridients": [
+    "Paneer",
+    "Tomato"
+  ],
+  "restaurantId": {
+    "$oid": "62f71de27824c682ccce79a0"
+  },
+  "image": "assets/breakfast.png",
+  "qty": 0,
+  "price": "230"
+},{
+  "_id": {
+    "$oid": "62f866fdee6d3d3b4fe285cb"
+  },
+  "name": "Butter Chicken ",
+  "description": "Made with paneer and some quick spicy content like chilly and flakes.",
+  "ingridients": [
+    "Paneer",
+    "Tomato"
+  ],
+  "restaurantId": {
+    "$oid": "62f71de27824c682ccce79a0"
+  },
+  "image": "assets/snacks.png",
+  "qty": 0,
+  "price": "420"
+},{
+  "_id": {
+    "$oid": "62f866fdee6d3d3b4fe285cc"
+  },
+  "name": "Margerita",
+  "description": "Made with paneer and some quick spicy content like chilly and flakes.",
+  "ingridients": [
+    "Paneer",
+    "Tomato"
+  ],
+  "restaurantId": {
+    "$oid": "62f71de27824c682ccce799d"
+  },
+  "image": "assets/drinks.png",
+  "qty": 0,
+  "price": "299"
+},{
+  "_id": {
+    "$oid": "62f866fdee6d3d3b4fe285cd"
+  },
+  "name": "Cheese Pizza",
+  "description": "Made with paneer and some quick spicy content like chilly and flakes.",
+  "ingridients": [
+    "Paneer",
+    "Tomato"
+  ],
+  "restaurantId": {
+    "$oid": "62f71de27824c682ccce799d"
+  },
+  "image": "assets/drinks.png",
+  "qty": 0,
+  "price": "199"
+},{
+  "_id": {
+    "$oid": "62f866fdee6d3d3b4fe285ce"
+  },
+  "name": "Evergreen Chicken Pizza",
+  "description": "Made with paneer and some quick spicy content like chilly and flakes.",
+  "ingridients": [
+    "Paneer",
+    "Tomato"
+  ],
+  "restaurantId": {
+    "$oid": "62f71de27824c682ccce799d"
+  },
+  "image": "assets/drinks.png",
+  "qty": 0,
+  "price": "265"
+},{
+  "_id": {
+    "$oid": "62f866fdee6d3d3b4fe285cf"
+  },
+  "name": "Chicken Bucket 8 Pcs",
+  "description": "Made with paneer and some quick spicy content like chilly and flakes.",
+  "ingridients": [
+    "Paneer",
+    "Tomato"
+  ],
+  "restaurantId": {
+    "$oid": "62f71de27824c682ccce799e"
+  },
+  "image": "assets/dinner.png",
+  "qty": 0,
+  "price": "799"
+},{
+  "_id": {
+    "$oid": "62f866fdee6d3d3b4fe285d0"
+  },
+  "name": "Chicken Bucket 4 Pcs",
+  "description": "Made with paneer and some quick spicy content like chilly and flakes.",
+  "ingridients": [
+    "Paneer",
+    "Tomato"
+  ],
+  "restaurantId": {
+    "$oid": "62f71de27824c682ccce799e"
+  },
+  "image": "assets/dinner.png",
+  "qty": 0,
+  "price": "399"
+},{
+  "_id": {
+    "$oid": "62f866fdee6d3d3b4fe285d1"
+  },
+  "name": "Chicken Bucket 16 Pcs",
+  "description": "Made with paneer and some quick spicy content like chilly and flakes.",
+  "ingridients": [
+    "Paneer",
+    "Tomato"
+  ],
+  "restaurantId": {
+    "$oid": "62f71de27824c682ccce799e"
+  },
+  "image": "assets/dinner.png",
+  "qty": 0,
+  "price": "999"
+},{
+  "_id": {
+    "$oid": "62f866fdee6d3d3b4fe285d2"
+  },
+  "name": "Veg Cheese Burger",
+  "description": "Made with paneer and some quick spicy content like chilly and flakes.",
+  "ingridients": [
+    "Paneer",
+    "Tomato"
+  ],
+  "restaurantId": {
+    "$oid": "62f71de27824c682ccce799f"
+  },
+  "image": "assets/dinner.png",
+  "qty": 0,
+  "price": "99"
+},{
+  "_id": {
+    "$oid": "62f866fdee6d3d3b4fe285d3"
+  },
+  "name": "Chicken Burger",
+  "description": "Made with paneer and some quick spicy content like chilly and flakes.",
+  "ingridients": [
+    "Paneer",
+    "Tomato"
+  ],
+  "restaurantId": {
+    "$oid": "62f71de27824c682ccce799f"
+  },
+  "image": "assets/dinner.png",
+  "qty": 0,
+  "price": "149"
+}]

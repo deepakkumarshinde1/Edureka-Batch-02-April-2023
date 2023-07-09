@@ -1,0 +1,46 @@
+[{
+  "_id": {
+    "$oid": "62f71d877824c682ccce7998"
+  },
+  "name": "Shalimar Bagh",
+  "city_id": 1,
+  "location_id": 1,
+  "city": "Delhi",
+  "country_name": "India"
+},{
+  "_id": {
+    "$oid": "62f71d877824c682ccce7999"
+  },
+  "name": "Janpat",
+  "city_id": 1,
+  "location_id": 2,
+  "city": "Delhi",
+  "country_name": "India"
+},{
+  "_id": {
+    "$oid": "62f71d877824c682ccce799a"
+  },
+  "name": "MSP",
+  "city_id": 1,
+  "location_id": 3,
+  "city": "Delhi",
+  "country_name": "India"
+},{
+  "_id": {
+    "$oid": "62f71d877824c682ccce799b"
+  },
+  "name": "MSP",
+  "city_id": 2,
+  "location_id": 4,
+  "city": "Pune",
+  "country_name": "India"
+},{
+  "_id": {
+    "$oid": "62f71d877824c682ccce799c"
+  },
+  "name": "Anand Vihar",
+  "city_id": 1,
+  "location_id": 5,
+  "city": "Delhi",
+  "country_name": "India"
+}]
