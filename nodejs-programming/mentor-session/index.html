@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        margin: 0;
+      }
+      .div-class {
+        border: 1px solid black;
+        width: 200px;
+        height: 100px;
+        overflow: auto;
+      }
+      .div-1 {
+        position: relative;
+        background-color: yellowgreen;
+        z-index: 3;
+      }
+      .div-2 {
+        position: relative;
+        background-color: red;
+        left: 50px;
+        top: -50px;
+        z-index: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div-class div-1">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique
+        ratione magni fugiat recusandae soluta et aspernatur praesentium
+        excepturi, laborum labore aperiam quam hic. Quis cumque odio sapiente
+        laudantium totam explicabo?
+      </p>
+    </div>
+
+    <div class="div-class div-2">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique
+        ratione magni fugiat recusandae soluta et aspernatur praesentium
+        excepturi, laborum labore aperiam quam hic. Quis cumque odio sapiente
+        laudantium totam explicabo?
+      </p>
+    </div>
+  </body>
+</html>

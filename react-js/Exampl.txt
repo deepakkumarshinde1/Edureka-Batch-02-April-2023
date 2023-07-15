@@ -1,0 +1,79 @@
+Easy to develop & maintain
+We can develop application with out class system
+Upgrading from One version to other version is very easy
+Just Javascript is good for react
+We typescript to develope react app.
+
+
+# create react application
+    you must have a node js
+    development server (React) need node js
+    but production we don't need node js
+
+    npm ==> Node Package Manager
+        install 
+        uninstall
+        run
+
+    to install react application 
+    npx => Node Package Executor
+        runtime ===> download ==> install (react app) ==> remove unwanted lib/packages
+
+
+    npx create-react-app name-of-app
+
+    react ==> Main Lib (70%)
+    react-dom ==> Work With Browser 
+    react-scripts ==> run dev-server , build production code , testing application
+     with cra-template
+
+# directory structure
+     packages.json ==> main project configuration
+     src ==> folder contents
+            all css files
+            all js file
+            all testing file
+            all css fonts
+            all background images file need for css
+
+    public ==> folder contents
+            index.html 
+            favicon
+            all images files
+
+
+index.js ==> main entry file of our project
+App.js ==> Component of react
+    Component/Components :: are basic building  blocks 
+
+    Component
+        import (optional) :: use a code.function of other file
+        logic (mandatory) :: actual code
+        export (mandatory) :: make availability for other file
+
+        Component Name  1st letter must be capital
+        Every Component has return type
+
+    Component 
+        We write a html like code => JSX :: Javascript XML
+
+        JSX ==> must always has/have one parent
+        <></> ==> JSX fragment
+
+        <div class="">  ==> <div className="">
+        <label for="">  ==> <label htmlFor="">
+        <input> <br>  ==> <input /> <br/>
+        <section style="color:red"> ==> <section style={{ color:"red" }}>
+        <section style="background-color:red;color:green"> ==> <section style={{ backgroundColor:"red", color:'green' }}>
+
+
+#   how to work with events
+# how to use bootstrap
+    CDN
+    downloading an use
+
+
+    What is state
+    What is useState
+    What Hooks
+    What is props
