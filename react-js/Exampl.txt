@@ -77,3 +77,26 @@ App.js ==> Component of react
     What is useState
     What Hooks
     What is props
+
+A counter App (inc / dec)
+
+    Components if we want to handel values => state
+    when the state changes ==> component will rerender
+
+
+    We have Concept Hooks
+        Hooks are function/methods to perform a complex operation
+        React Hooks ==> in build
+        ***We can only use the hooks in react function component
+        identify the hooks function , they starts "use"
+        Hooks function/methods for state ==> useState
+
+        useState in return provides a array with value
+        useState(10); [value , updateFunction]
+    
+
+    React Props
+        if we want to pass data from parent to child ==> props
+        you will not able change data ==> props are readonly in nature
+
+
