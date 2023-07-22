@@ -100,3 +100,47 @@ A counter App (inc / dec)
         you will not able change data ==> props are readonly in nature
 
 
+React Router DOM ==> 6
+    Components
+        BrowserReact ==> enable routing
+        Routes ==> parent of route
+        Route ==> add the path of route & sent component
+        Outlet ==> enable child routing
+        Navigate ==> redirect
+        Link  ==> navigate form 1 page to other page (a)
+        NavLink ==> like a link but only change is that it is use in navigation/menu 
+
+    Hook
+        useNavigate ==> navigation but from javascript
+        useParams ==> read dynamic URL
+        useParamSearch ==> read query parameters from URL
+
+
+
+    on page load we want to hit api (server call)
+
+    react-life-cycle
+        component
+            load ==> mounting ==> only once
+            update  ==> updating ==> every time when state updates
+            unload ==> unmounting ==> only once
+
+        functional component ==> useEffect ==> handles react-life-cycle
+            useEffect( ()=>{} , [] )  :: [] ==> dependency list
+
+             useEffect( ()=>{} , [] ) ==> mounting
+            
+             useEffect( ()=>{} , [state1,state2] ) ==> updating
+
+             useEffect( ()=>{
+                    return ()=>{
+                        ==> unmounting
+                    }
+             } , [] )
+
+
+
+CORS ==> CORS disable ==> Cross Origin Resource
+
+Server Port ==> 3040; enable cors on server
+React Port ==> 3000;

@@ -1,8 +1,12 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-
+const cors = require("cors");
 const AppRouter = require("./routes/AppRoutes");
+
+// enable cors
+app.use(cors());
+
 // enable post data
 app.use(express.json()); // '{abc:10,xyz:123}'  ==> {abc:10,xyz:123}// allow row i.e json data
 app.use(express.urlencoded({ extended: false })); // enable form data
