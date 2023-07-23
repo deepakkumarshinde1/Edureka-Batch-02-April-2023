@@ -1,9 +1,31 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
+  let navigate = useNavigate();
+  let initData = {
+    _id: "",
+    name: "",
+    city_id: 0,
+    location_id: 0,
+    city: "",
+    country_name: "",
+  };
   let [locations, setLocations] = useState([]);
+  let [hideLocation, setHideLocation] = useState(true);
+  let [selectLocation, setSelectLocation] = useState({ ...initData });
   let [meals, setMeals] = useState([]);
+  let [restaurant_list, setRestaurantList] = useState({
+    list: [],
+    message: "0 restaurant found",
+  });
+
+  let setASelectedLocation = (id) => {
+    setSelectLocation(locations[id]);
+    setHideLocation(true);
+  };
+
   let getMealTypeList = async () => {
     try {
       let url = "http://localhost:3040/api/get-meal-type-list";
@@ -26,6 +48,16 @@ function Home() {
       console.log(error);
     }
   };
+  let getRestaurantListByLocId = async () => {
+    let url =
+      "http://localhost:3040/api/get-restaurant-list-by-loc-id/" +
+      selectLocation.location_id;
+    let { data } = await axios.get(url);
+    setRestaurantList({
+      list: data.result,
+      message: data.result.length + " restaurant found",
+    });
+  };
 
   // only on page load
   useEffect(() => {
@@ -33,6 +65,11 @@ function Home() {
     getLocationList();
   }, []); // on mount
 
+  useEffect(() => {
+    if (selectLocation.location_id !== 0) {
+      getRestaurantListByLocId();
+    }
+  }, [selectLocation]);
   return (
     <>
       <section className="row main-section align-content-start">
@@ -56,27 +93,70 @@ function Home() {
                 className="form-control  set-100 mb-lg-0 w-100 me-lg-3 py-2 px-3"
                 placeholder="Select a location"
                 readOnly
+                value={
+                  selectLocation.name === ""
+                    ? ""
+                    : `${selectLocation.name} ,${selectLocation.city}`
+                }
+                onClick={() => setHideLocation(false)}
               />
-              <ul class="list-group position-absolute top-100 w-100 z-100">
-                {locations.map((location) => {
+              {hideLocation ? null : (
+                <ul className="list-group position-absolute top-100 w-100 z-100">
+                  {locations.map((location, index) => {
+                    return (
+                      <li
+                        key={location._id}
+                        className="list-group-item"
+                        onClick={() => setASelectedLocation(index)}
+                      >
+                        {location.name}, {location.city}
+                      </li>
+                    );
+                  })}
+                </ul>
+              )}
+            </div>
+            <div className="w-75 position-relative mb-3">
+              <div className="w-100 input-group">
+                <span className="input-group-text bg-white">
+                  <i className="fa fa-search text-primary"></i>
+                </span>
+                <input
+                  type="text"
+                  className="form-control py-2 px-3"
+                  placeholder={restaurant_list.message}
+                  onChange={() => {}}
+                  readOnly
+                />
+              </div>
+
+              <ul className="list-group position-absolute top-100 w-100 z-99">
+                {restaurant_list.list.map((restaurant, index) => {
                   return (
-                    <li key={location._id} class="list-group-item">
-                      An item
+                    <li
+                      key={restaurant._id}
+                      className="list-group-item"
+                      onClick={() =>
+                        navigate("/restaurant-details/" + restaurant._id)
+                      }
+                    >
+                      <img
+                        style={{
+                          width: "50px",
+                          height: "50px",
+                          borderRadius: "50px",
+                        }}
+                        src={"/images/" + restaurant.image}
+                        className="me-2"
+                        alt=""
+                      />
+                      <span>
+                        {restaurant.name}, {restaurant.city}
+                      </span>
                     </li>
                   );
                 })}
               </ul>
-            </div>
-
-            <div className="w-75 input-group">
-              <span className="input-group-text bg-white">
-                <i className="fa fa-search text-primary"></i>
-              </span>
-              <input
-                type="text"
-                className="form-control py-2 px-3"
-                placeholder="Search for restaurants"
-              />
             </div>
           </div>
         </section>

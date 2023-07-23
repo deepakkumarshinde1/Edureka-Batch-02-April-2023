@@ -1,3 +1,4 @@
+const MenuItemModel = require("../model/MenuItemModel");
 const RestaurantModel = require("../model/RestaurantModel");
 
 const RestaurantController = {
@@ -20,6 +21,14 @@ const RestaurantController = {
   getSingleRestaurantDetails: async (request, response) => {
     let { rest_id } = request.params;
     let result = await RestaurantModel.findOne({ _id: rest_id });
+    response.send({
+      call: true,
+      result,
+    });
+  },
+  getMenuItems: async (request, response) => {
+    let { r_id } = request.params;
+    let result = await MenuItemModel.find({ restaurantId: r_id });
     response.send({
       call: true,
       result,

@@ -3,6 +3,10 @@
   bottom: 0;
 }
 
+.z-99 {
+  z-index: 99 !important;
+  bottom: 0;
+}
 .main-section {
   background-color: red;
   height: 70vh;
@@ -152,11 +156,13 @@
     align-items: center;
   }
   .search > div {
+    width: 100% !important;
+  }
+  .form-control {
     width: 80% !important;
   }
-  .form-control,
   .input-group {
-    width: 80% !important;
+    width: 100% !important;
   }
 
   .search > div > .set-100 {
