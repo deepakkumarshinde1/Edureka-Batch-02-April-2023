@@ -8,6 +8,7 @@ function Restaurant() {
   let { id } = useParams();
   let [rDetails, setRDetails] = useState(null);
   let [rMenuList, setRMenuList] = useState([]);
+  let [totalPrice, setTotalPrice] = useState(0);
   let getRestaurantDetails = async () => {
     let url = "http://localhost:3040/api/get-restaurant-details/" + id;
     let { data } = await axios.get(url);
@@ -18,9 +19,56 @@ function Restaurant() {
     let { data } = await axios.get(url);
     setRMenuList(data.result);
   };
+
+  let incQty = (index) => {
+    let _rMenuList = [...rMenuList];
+    _rMenuList[index].qty += 1;
+    totalPrice += _rMenuList[index].price;
+    setRMenuList(_rMenuList);
+    setTotalPrice(totalPrice);
+  };
+
+  let decQty = (index) => {
+    let _rMenuList = [...rMenuList];
+    _rMenuList[index].qty -= 1;
+    totalPrice -= _rMenuList[index].price;
+    setRMenuList(_rMenuList);
+    setTotalPrice(totalPrice);
+  };
+
+  let getPaymentView = async () => {
+    const url = "http://localhost:3040/api/create-order";
+    let { data } = await axios.post(url, { amount: totalPrice });
+
+    let options = {
+      key: "rzp_test_RB0WElnRLezVJ5", // Enter the Key ID generated from the Dashboard
+      amount: totalPrice * 100, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+      currency: "INR",
+      name: "Zomato App",
+      description: "Make Your Now",
+      image:
+        "https://i.pinimg.com/originals/1a/17/ed/1a17ed134ffeb3461f5d0f3ca0ee227d.png",
+      order_id: data.order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+      handler: function (response) {
+        let sendData = {
+          payment_id: response.razorpay_payment_id,
+          order_id: response.razorpay_order_id,
+          signature: response.razorpay_signature,
+        };
+      },
+      prefill: {
+        name: "Deepakkumar Shinde",
+        email: "deepakkumar@gmail.com",
+        contact: "989098765681",
+      },
+    };
+    var rzp1 = new window.Razorpay(options);
+    rzp1.open();
+  };
   useEffect(() => {
     getRestaurantDetails();
   }, []);
+
   return (
     <>
       {rDetails === null ? null : (
@@ -69,9 +117,9 @@ function Restaurant() {
                   ></button>
                 </div>
                 <div className="modal-body ">
-                  {rMenuList.map((menu) => {
+                  {rMenuList.map((menu, index) => {
                     return (
-                      <div className="row p-2">
+                      <div className="row p-2" key={menu._id}>
                         <div className="col-8">
                           <p className="mb-1 h6">{menu.name}</p>
                           <p className="mb-1">₹ {menu.price} /-</p>
@@ -81,14 +129,27 @@ function Restaurant() {
                           <div className="menu-food-item">
                             <img src={"/images/" + menu.image} alt="" />
                             {menu.qty === 0 ? (
-                              <button className="btn btn-primary btn-sm add">
+                              <button
+                                onClick={() => incQty(index)}
+                                className="btn btn-primary btn-sm add"
+                              >
                                 Add
                               </button>
                             ) : (
                               <div className="order-item-count section ">
-                                <span className="hand">-</span>
+                                <span
+                                  className="hand"
+                                  onClick={() => decQty(index)}
+                                >
+                                  -
+                                </span>
                                 <span>{menu.qty}</span>
-                                <span className="hand">+</span>
+                                <span
+                                  className="hand"
+                                  onClick={() => incQty(index)}
+                                >
+                                  +
+                                </span>
                               </div>
                             )}
                           </div>
@@ -98,16 +159,18 @@ function Restaurant() {
                     );
                   })}
 
-                  <div className="d-flex justify-content-between">
-                    <h3>Subtotal subTotal</h3>
-                    <button
-                      className="btn btn-danger"
-                      data-bs-target="#exampleModalToggle2"
-                      data-bs-toggle="modal"
-                    >
-                      Pay Now
-                    </button>
-                  </div>
+                  {totalPrice > 0 ? (
+                    <div className="d-flex justify-content-between">
+                      <h3>Total: {totalPrice} /-</h3>
+                      <button
+                        className="btn btn-danger"
+                        data-bs-target="#exampleModalToggle2"
+                        data-bs-toggle="modal"
+                      >
+                        Next
+                      </button>
+                    </div>
+                  ) : null}
                 </div>
               </div>
             </div>
@@ -123,7 +186,7 @@ function Restaurant() {
               <div className="modal-content">
                 <div className="modal-header">
                   <h5 className="modal-title" id="exampleModalToggleLabel2">
-                    name
+                    User Details
                   </h5>
                   <button
                     type="button"
@@ -180,6 +243,10 @@ function Restaurant() {
                       onChange={() => {}}
                     ></textarea>
                   </div>
+                  <i>
+                    Your payment for this order is{" "}
+                    <b className="text-primary">{totalPrice} /-</b>
+                  </i>
                 </div>
                 <div className="modal-footer">
                   <button
@@ -189,7 +256,9 @@ function Restaurant() {
                   >
                     Back
                   </button>
-                  <button className="btn btn-success">PROCEED</button>
+                  <button className="btn btn-success" onClick={getPaymentView}>
+                    Pay Now
+                  </button>
                 </div>
               </div>
             </div>
@@ -234,13 +303,13 @@ function Restaurant() {
                       <li>Overview & Contact</li>
                     </ul>
                     <a
-                      className="btn btn-danger align-self-start"
+                      className="btn btn-primary align-self-start"
                       data-bs-toggle="modal"
                       href="#exampleModalToggle"
                       role="button"
                       onClick={getMenuItemList}
                     >
-                      Place Online Order
+                      Select Menu
                     </a>
                   </div>
                   <hr className="mt-0" />
