@@ -1,5 +1,5 @@
 const Razorpay = require("razorpay");
-
+const crypto = require("crypto");
 const KEY_ID = "rzp_test_RB0WElnRLezVJ5";
 const KEY_SECRET = "VLMCIrqKxRMNR9EcRcbL2UG8";
 let instance = new Razorpay({
@@ -30,12 +30,16 @@ let PaymentController = {
   },
   verifyPayment: (request, response) => {
     let { payment_id, order_id, signature } = request.body;
-    let generated_signature = hmac_sha256(
-      order_id + "|" + payment_id,
-      KEY_SECRET
-    );
-    console.log("generated_signature", generated_signature);
-    console.log("signature", signature);
+
+    let payDetails = order_id + "|" + payment_id;
+    let generated_signature = crypto
+      .createHmac("sha256", KEY_SECRET)
+      .update(payDetails.toString())
+      .digest("hex");
+
+    console.log("gen_signature", generated_signature);
+    console.log("cli_signature", signature);
+
     if (generated_signature == signature) {
       response.send({
         status: true,

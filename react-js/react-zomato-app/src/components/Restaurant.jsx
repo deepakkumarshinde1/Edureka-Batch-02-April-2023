@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
+import Header from "./Header";
 
 function Restaurant() {
   let { id } = useParams();
@@ -49,12 +50,15 @@ function Restaurant() {
       image:
         "https://i.pinimg.com/originals/1a/17/ed/1a17ed134ffeb3461f5d0f3ca0ee227d.png",
       order_id: data.order.id, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-      handler: function (response) {
+      handler: async function (response) {
         let sendData = {
           payment_id: response.razorpay_payment_id,
           order_id: response.razorpay_order_id,
           signature: response.razorpay_signature,
         };
+        let url = "http://localhost:3040/api/verify-payment";
+        let { data } = await axios.post(url, sendData);
+        console.log(data);
       },
       prefill: {
         name: "Deepakkumar Shinde",
@@ -65,6 +69,7 @@ function Restaurant() {
     var rzp1 = new window.Razorpay(options);
     rzp1.open();
   };
+
   useEffect(() => {
     getRestaurantDetails();
   }, []);
@@ -264,18 +269,7 @@ function Restaurant() {
             </div>
           </div>
 
-          <div className="row bg-danger justify-content-center">
-            <div className="col-10 d-flex justify-content-between py-2">
-              <p className="m-0 brand">e!</p>
-              <div>
-                <button className="btn text-white">Login</button>
-                <button className="btn btn-outline-light">
-                  <i className="fa fa-search" aria-hidden="true"></i>Create a
-                  Account
-                </button>
-              </div>
-            </div>
-          </div>
+          <Header />
           {/* <!-- section -->  */}
           <div className="row justify-content-center">
             <div className="col-10">
