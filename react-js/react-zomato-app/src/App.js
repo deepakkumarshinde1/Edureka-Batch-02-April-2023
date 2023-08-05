@@ -10,7 +10,7 @@ function App() {
       <main className="container-fluid">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/search" element={<Search />} />
+          <Route path="/search/:id/:name" element={<Search />} />
           <Route path="/restaurant-details/:id" element={<Restaurant />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>

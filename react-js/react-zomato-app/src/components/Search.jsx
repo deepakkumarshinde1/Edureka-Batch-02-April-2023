@@ -1,22 +1,82 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import Header from "./Header";
+
 function Search() {
+  let navigate = useNavigate();
+  let { id, name } = useParams();
+  let [filter, setFilter] = useState({
+    meal_type: id,
+    sort: 1,
+    cuisine: [],
+  });
+  let [locations, setLocations] = useState([]);
+  let [restaurantList, setRestaurantList] = useState([]);
+  let getLocationList = async () => {
+    try {
+      let url = "http://localhost:3040/api/get-location-list";
+      let response = await axios.get(url);
+      let data = response.data;
+      setLocations(data.result);
+    } catch (error) {
+      alert("Server Error");
+      console.log(error);
+    }
+  };
+  let getFilterDetails = async () => {
+    let url = "http://localhost:3040/api/filter";
+    let { data } = await axios.post(url, filter);
+    setRestaurantList(data.result);
+  };
+
+  let setFilterData = (event, type) => {
+    let { value } = event.target;
+    let _filter = { ...filter };
+    switch (type) {
+      case "sort":
+        _filter["sort"] = Number(value);
+        break;
+
+      case "location":
+        value = Number(value);
+        if (value === -1) {
+          delete _filter["location"];
+        } else {
+          _filter["location"] = value;
+        }
+        break;
+      case "cuisine":
+        if (event.target.checked) {
+          _filter["cuisine"].push(Number(value));
+        } else {
+          _filter["cuisine"] = _filter["cuisine"].filter(
+            (cuisine) => cuisine !== Number(value)
+          );
+        }
+
+        break;
+      default:
+        break;
+    }
+
+    setFilter(_filter);
+  };
+
+  useEffect(() => {
+    getLocationList();
+  });
+  useEffect(() => {
+    getFilterDetails();
+  }, [filter]);
+
   return (
     <>
-      <div className="row bg-danger justify-content-center">
-        <div className="col-10 d-flex justify-content-between py-2">
-          <p className="m-0 brand">e!</p>
-          <div>
-            <button className="btn text-white">Login</button>
-            <button className="btn btn-outline-light">
-              <i className="fa fa-search" aria-hidden="true"></i>Create a
-              Account
-            </button>
-          </div>
-        </div>
-      </div>
+      <Header />
       {/* <!-- section --> */}
       <div className="row">
         <div className="col-12 px-5 pt-4">
-          <p className="h3">Breakfast Places In Mumbai</p>
+          <p className="h3"> {name} Search Result</p>
         </div>
         {/* <!-- food item --> */}
         <div className="col-12 d-flex flex-wrap px-lg-5 px-md-5 pt-4">
@@ -38,50 +98,75 @@ function Search() {
                 <label htmlFor="" className="form-label">
                   Select Location
                 </label>
-                <select className="form-select form-select-sm">
-                  <option value="">option-1</option>
-                  <option value="">option-1</option>
-                  <option value="">option-1</option>
-                  <option value="">option-1</option>
-                  <option value="">option-1</option>
+                <select
+                  className="form-select form-select-sm"
+                  onChange={(event) => setFilterData(event, "location")}
+                >
+                  <option value="-1">----select----</option>
+                  {locations.map((location, index) => {
+                    return (
+                      <option key={location._id} value={location.location_id}>
+                        {location.name}, {location.city}
+                      </option>
+                    );
+                  })}
                 </select>
               </div>
               <p className="mt-4 mb-2 fw-bold">Cuisine</p>
               <div>
                 <div className="ms-1">
-                  <input type="checkbox" className="form-check-input" />
+                  <input
+                    type="checkbox"
+                    className="form-check-input"
+                    value={1}
+                    onClick={(event) => setFilterData(event, "cuisine")}
+                  />
                   <label htmlFor="" className="form-check-label ms-1">
                     North Indian
                   </label>
                 </div>
                 <div className="ms-1">
-                  <input type="checkbox" className="form-check-input" />
+                  <input
+                    type="checkbox"
+                    className="form-check-input"
+                    value={2}
+                    onClick={(event) => setFilterData(event, "cuisine")}
+                  />
                   <label htmlFor="" className="form-check-label ms-1">
-                    North Indian
+                    South Indian
                   </label>
                 </div>
                 <div className="ms-1">
-                  <input type="checkbox" className="form-check-input" />
+                  <input
+                    type="checkbox"
+                    className="form-check-input"
+                    value={3}
+                    onClick={(event) => setFilterData(event, "cuisine")}
+                  />
                   <label htmlFor="" className="form-check-label ms-1">
-                    North Indian
+                    Chinese
                   </label>
                 </div>
                 <div className="ms-1">
-                  <input type="checkbox" className="form-check-input" />
+                  <input
+                    type="checkbox"
+                    className="form-check-input"
+                    value={4}
+                    onClick={(event) => setFilterData(event, "cuisine")}
+                  />
                   <label htmlFor="" className="form-check-label ms-1">
-                    North Indian
+                    Fast Food
                   </label>
                 </div>
                 <div className="ms-1">
-                  <input type="checkbox" className="form-check-input" />
+                  <input
+                    type="checkbox"
+                    className="form-check-input"
+                    value={5}
+                    onClick={(event) => setFilterData(event, "cuisine")}
+                  />
                   <label htmlFor="" className="form-check-label ms-1">
-                    North Indian
-                  </label>
-                </div>
-                <div className="ms-1">
-                  <input type="checkbox" className="form-check-input" />
-                  <label htmlFor="" className="form-check-label ms-1">
-                    North Indian
+                    Street Food
                   </label>
                 </div>
               </div>
@@ -121,13 +206,25 @@ function Search() {
               <p className="mt-4 mb-2 fw-bold">Sort</p>
               <div>
                 <div className="ms-1">
-                  <input type="radio" className="form-check-input" />
+                  <input
+                    type="radio"
+                    className="form-check-input"
+                    value={1}
+                    onClick={(event) => setFilterData(event, "sort")}
+                    name="sort"
+                  />
                   <label htmlFor="" className="form-check-label ms-1">
                     Price low to high
                   </label>
                 </div>
                 <div className="ms-1">
-                  <input type="radio" className="form-check-input" />
+                  <input
+                    type="radio"
+                    className="form-check-input"
+                    value={-1}
+                    name="sort"
+                    onClick={(event) => setFilterData(event, "sort")}
+                  />
                   <label htmlFor="" className="form-check-label ms-1">
                     Price high to low
                   </label>
@@ -138,62 +235,58 @@ function Search() {
           </div>
           {/* <!-- search result --> */}
           <div className="col-12 col-lg-8 col-md-7">
-            <div className="col-12 food-shadow p-4 mb-4">
-              <div className="d-flex align-items-center">
-                <img src="/images/food-item.png" className="food-item" />
-                <div className="ms-5">
-                  <p className="h4 fw-bold">The Big Chill Cakery</p>
-                  <span className="fw-bold text-muted">FORT</span>
-                  <p className="m-0 text-muted">
-                    <i
-                      className="fa fa-map-marker fa-2x text-danger"
-                      aria-hidden="true"
-                    ></i>
-                    Shop 1, Plot D, Samruddhi Complex, Chincholi …
-                  </p>
+            {restaurantList.map((restaurant, index) => {
+              return (
+                <div
+                  key={restaurant._id}
+                  className="col-12 food-shadow p-4 mb-4"
+                  onClick={() =>
+                    navigate("/restaurant-details/" + restaurant._id)
+                  }
+                >
+                  <div className="d-flex align-items-center">
+                    <img
+                      src={"/images/" + restaurant.image}
+                      className="food-item"
+                    />
+                    <div className="ms-5">
+                      <p className="h4 fw-bold">{restaurant.name}</p>
+                      <span className="fw-bold text-muted">
+                        {restaurant.locality}
+                      </span>
+                      <p className="m-0 text-muted">
+                        <i
+                          className="fa fa-map-marker fa-2x text-danger"
+                          aria-hidden="true"
+                        ></i>
+                        {restaurant.locality}, {restaurant.city}
+                      </p>
+                    </div>
+                  </div>
+                  <hr />
+                  <div className="d-flex">
+                    <div>
+                      <p className="m-0">CUISINES:</p>
+                      <p className="m-0">COST FOR TWO:</p>
+                    </div>
+                    <div className="ms-5">
+                      <p className="m-0 fw-bold">
+                        {restaurant.cuisine
+                          .map((cuisine) => {
+                            return cuisine.name;
+                          })
+                          .join(", ")}
+                      </p>
+                      <p className="m-0 fw-bold">
+                        <i className="fa fa-inr" aria-hidden="true"></i>
+                        {restaurant.min_price}
+                      </p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <hr />
-              <div className="d-flex">
-                <div>
-                  <p className="m-0">CUISINES:</p>
-                  <p className="m-0">COST FOR TWO:</p>
-                </div>
-                <div className="ms-5">
-                  <p className="m-0 fw-bold">Bakery</p>
-                  <p className="m-0 fw-bold">
-                    <i className="fa fa-inr" aria-hidden="true"></i>
-                    700
-                  </p>
-                </div>
-              </div>
-            </div>
+              );
+            })}
 
-            <div className="col-12 food-shadow p-4 mb-4">
-              <div className="d-flex align-items-center">
-                <img src="/images/food-item.png" className="food-item" />
-                <div className="ms-5">
-                  <p className="h4 fw-bold">The Big Chill Cakery</p>
-                  <span className="fw-bold text-muted">FORT</span>
-                  <p className="m-0 text-muted">
-                    Shop 1, Plot D, Samruddhi Complex, Chincholi …
-                  </p>
-                </div>
-              </div>
-              <hr />
-              <div className="d-flex">
-                <div>
-                  <p className="m-0">CUISINES:</p>
-                  <p className="m-0">COST FOR TWO:</p>
-                </div>
-                <div className="ms-5">
-                  <p className="m-0 fw-bold">Bakery</p>
-                  <p className="m-0 fw-bold">
-                    <i className="fa fa-inr fa-2x" aria-hidden="true"></i> 700
-                  </p>
-                </div>
-              </div>
-            </div>
             <div className="col-12 pagination d-flex justify-content-center">
               <ul className="pages">
                 <li>&lt;</li>

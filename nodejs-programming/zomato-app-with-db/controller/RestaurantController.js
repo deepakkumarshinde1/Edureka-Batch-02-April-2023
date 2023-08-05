@@ -35,7 +35,21 @@ const RestaurantController = {
     });
   },
   filter: async (request, response) => {
-    let result = await RestaurantModel.find();
+    let { meal_type, sort, location, cuisine } = request.body;
+    //location
+    //cuisine
+    //cost for 2
+    // sort (default acs)
+    // page
+    let filterData = {};
+
+    if (meal_type !== undefined) filterData["mealtype_id"] = meal_type;
+    if (location !== undefined) filterData["location_id"] = location;
+    if (cuisine.length !== 0) filterData["cuisine_id"] = { $in: cuisine };
+
+    let result = await RestaurantModel.find(filterData).sort({
+      min_price: sort,
+    });
     response.send({
       call: true,
       result,

@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Header from "./Header";
 
 function Home() {
   let navigate = useNavigate();
@@ -73,14 +74,15 @@ function Home() {
   return (
     <>
       <section className="row main-section align-content-start">
-        <header className="col-12 py-3">
+        {/* <header className="col-12 py-3">
           <div className="container d-lg-flex justify-content-end d-none">
             <button className="btn text-white me-3">Login</button>
             <button className="btn text-white border border-white">
               Create an account
             </button>
           </div>
-        </header>
+        </header> */}
+        <Header page={"home"} />
         <section className="col-12 d-flex flex-column align-items-center justify-content-center">
           <p className="brand-name fw-bold my-lg-2 mb-0">e!</p>
           <p className="h1 text-white my-3 text-center">
@@ -174,6 +176,9 @@ function Home() {
                   <section
                     key={meal._id}
                     className="px-0 d-flex border border-1 quick-search-item"
+                    onClick={() =>
+                      navigate(`/search/${meal.meal_type}/${meal.name}`)
+                    }
                   >
                     <img
                       src={"/images/" + meal.image}

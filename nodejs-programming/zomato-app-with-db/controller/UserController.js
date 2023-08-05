@@ -24,25 +24,31 @@ const UserController = {
     let user = request.body;
 
     let saveData = {
-      f_name: user.f_name,
-      l_name: user.l_name,
-      gender: user.gender,
+      first_name: user.f_name,
+      address: user.address,
       email: user.email,
       mobile: user.mobile,
       password: user.password,
     };
-    let newUser = new UserModel(saveData);
-    let result = await newUser.save(); /// insert data in
-    response.send({
-      call: true,
-      result,
-    });
+    let result = await UserModel.findOne({ mobile: user.mobile });
+    if (result) {
+      response.send({
+        call: false,
+        message: "Given Mobile Number Exist",
+      });
+    } else {
+      let newUser = new UserModel(saveData);
+      await newUser.save(); /// insert data in
+      response.send({
+        call: true,
+      });
+    }
   },
   userLogin: async (request, response) => {
     let { username, password } = request.body;
     let isUserValid = await UserModel.findOne(
       {
-        email: username,
+        mobile: username,
         password: password,
       },
       { password: 0 }
