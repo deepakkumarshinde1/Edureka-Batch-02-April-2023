@@ -7,12 +7,12 @@ function Header(props) {
   let navigate = useNavigate();
   let headerClass = "d-flex justify-content-between py-2";
   let initialUserValue = {
-    fullName: "deepak",
-    email: "deepakkumar@gmail.com",
-    mobile: "80071717171",
-    password: "deepak@123",
-    confirmPassword: "deepak@123",
-    address: "Nashik",
+    fullName: "",
+    email: "",
+    mobile: "",
+    password: "",
+    confirmPassword: "",
+    address: "",
   };
   let [newUser, setNewUser] = useState({ ...initialUserValue });
   let [showPassword, setShowPassword] = useState(false);
@@ -53,20 +53,22 @@ function Header(props) {
   };
 
   let userLogin = async () => {
-    let sendData = {
-      username: newUser.mobile,
-      password: newUser.password,
-    };
-    let url = "http://localhost:3040/api/login";
-    let { data } = await axios.post(url, sendData);
-    if (data.call === true) {
-      alert("User Login Successfully");
-      // browser localStorage
-      // convert a json to string ==> JSON.stringify
-      localStorage.setItem("user", JSON.stringify(data.user));
-      window.location.assign("/");
-    } else {
-      alert("Username or Password is wrong");
+    if ((newUser.mobile !== "") & (newUser.password !== "")) {
+      let sendData = {
+        username: newUser.mobile,
+        password: newUser.password,
+      };
+      let url = "http://localhost:3040/api/login";
+      let { data } = await axios.post(url, sendData);
+      if (data.call === true) {
+        alert("User Login Successfully");
+        // browser localStorage
+        // convert a json to string ==> JSON.stringify
+        localStorage.setItem("user", JSON.stringify(data.user));
+        window.location.assign("/");
+      } else {
+        alert("Username or Password is wrong");
+      }
     }
   };
 
